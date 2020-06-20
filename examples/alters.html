@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新消息通知</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.mui-control-content {
+				height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" style=" background-color: #1B646D;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color: white;">新消息通知</h1>
+		</header>
+		<br>
+		<br>
+		<br>
+		<h6>H&F打开时</h6>
+		<ul class="mui-table-view">
+				 <li class="mui-table-view-cell" onclick="getsoundinfo()">
+
+				 		<a class="mui-navigate-right">
+				 			 声音
+				 			 <div id="open" class="mui-switch mui-active mui-switch-blue" >
+				 			 	<div class="mui-switch-handle"></div>
+				 		</a>
+				 </li>
+				 <li class="mui-table-view-cell" onclick="deviceVibrate()">
+				 		<a class="mui-navigate-right">
+				 			 振动
+				 			 <div id="open" class="mui-switch mui-active mui-switch-blue" >
+				 			 	<div class="mui-switch-handle"></div>
+				 		</a>
+				 </li>
+		</ul>
+		<br>
+		<h6>H&F未打开时</h6>
+		<ul class="mui-table-view">
+				 <li class="mui-table-view-cell" onclick="getsoundinfo()">
+				 		<a class="mui-navigate-right">
+				 			 声音
+				 			 <div id="open" class="mui-switch mui-active mui-switch-blue" >
+				 			 	<div class="mui-switch-handle"></div>
+				 		</a>
+				 </li>
+				 <li class="mui-table-view-cell" onclick="deviceVibrate()">
+				 		<a class="mui-navigate-right">
+				 			 振动
+				 			 <div id="open" class="mui-switch mui-active mui-switch-blue" >
+				 			 	<div class="mui-switch-handle"></div>
+				 		</a>
+				 </li>
+		</ul>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			function setinfo(s){
+				document.getElementById("info").innerHTML=s;
+			}
+			function setbright(v){
+				plus.screen.setBrightness(v/100);
+			}
+			function getbright(){
+				var v =Math.round( plus.screen.getBrightness()*100);
+				document.getElementById("bright").value=v;
+			}
+			mui.plusReady(function(){
+				getbright();
+				document.getElementById("lock").addEventListener("toggle",function(event){
+					if(event.detail.isActive){
+						plus.screen.lockOrientation("landscape");
+					}else{
+						plus.screen.unlockOrientation();
+					}
+				})
+			})
+			function getnumberinfo(){
+				plus.device.dial("10086",false);
+			}
+			function getsoundinfo(){
+				  var str = "";
+				    switch ( plus.os.name ) {
+				    	case "iOS":
+						    if ( plus.device.model.indexOf("iPhone") >= 0 ) {
+				                plus.device.beep();
+						        str += "设备蜂鸣中...";
+						    } else {
+						        str += "此设备不支持蜂鸣";
+						    }
+				    	break;
+				    	default:
+				    		plus.device.beep();
+				    		str += "设备蜂鸣中...";
+				    	break;
+				    }
+					setinfo(str);
+			}
+			function deviceVibrate(){
+				var str = "";
+				    switch ( plus.os.name ) {
+				    	case "iOS":
+				            if ( plus.device.model.indexOf("iPhone") >= 0 ) {
+				                plus.device.vibrate();
+				                str += "设备振动中...";
+				            } else {
+				                str += "此设备不支持振动";
+				            }
+				    	break;
+				    	default:
+				    		plus.device.vibrate();
+				            str += "设备振动中...";
+				    	break;
+				    }
+					setinfo(str);
+			}
+			mui.plusReady(function(){
+							document.getElementById("open").addEventListener("toggle",function(event){
+							if(event.detail.isActive){
+								plus.device.setWakelock(true);
+							}else{
+								plus.device.setWakelock(false);
+							}
+							})
+						})
+		</script>
+	</body>
+
+</html>

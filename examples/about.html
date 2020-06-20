@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/shopping-cart.css">
+		<script type="text/javascript">
+			//定义全局变量
+			var i = 0;
+			//金额总和
+			var money = 0;
+			//计算合计价格
+			var cart_money = new Object();
+			//全部商品ID
+			var cart_id = new Object();
+			//备份商品ID，用于全选后去掉全选又再次全选
+			var cart_id_copy = new Object();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style=" background-color: #1B646D;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color: white;" >关于H&F</h1>
+		</header>
+		<div class="nav-bottom">
+			<div class="new-mine">
+				<p style="background-image: url(../images/hF.png);"></p>
+				<div class="mine-photo min-photo-bgimg">
+					
+					<br><br><br><br><br><br>
+					<h3 style="color: #000000;">Heath&Fresh</h3>
+					<h4 style="color: #6d6a6a;">Version 7.0.12</h4>
+				</div>		
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="new-my-news.html" class="mui-navigate-right">
+							去评分
+						</a>
+					</li>
+					<li class="mui-table-view-cell" >
+						<a href="new-address.html" class="mui-navigate-right">
+							功能介绍
+						</a>
+					</li>
+					<li class="mui-table-view-cell" onclick="location.href='alters.html';">
+						<a class="mui-navigate-right">
+							版本更新
+						</a>
+					</li>
+				</ul>
+			</div><br><br><br>
+			<h6 align="center" style="color: #3366FF;">《软件许可及服务协议》</h6>
+			<h6 align="center" style="color: #c5cac4;">H&F公司版权所有</h6>
+			<h6 align="center" style="color: #c5cac4;">Copyright ©2018-2020 HF.All Rights Reserved </h6>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+
+	</body>
+
+</html>
