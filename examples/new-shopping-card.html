@@ -80,8 +80,8 @@
 								<div class="div_center">
 									<h4>套餐二</h4>
 									<h5 class="mui-text-center ">详细:</h5>
-									<h5 class="mui-text-right "><label>应付账款：</label>￥<label>68.00</label></h5>
-									<h5 class="mui-text-right font-color-pink"><label>实际付款：</label>￥<label>68.00</label></h5>
+									<h5 class="mui-text-right "><label>应付账款：</label>￥<label>101.00</label></h5>
+									<h5 class="mui-text-right font-color-pink"><label>实际付款：</label>￥<label>101.00</label></h5>
 									<p class="now_value"><i>￥</i><b class="qu_su">101.00</b></p>
 								</div>
 								<div class="div_right">
@@ -141,6 +141,11 @@
 			document.getElementById('address').addEventListener('tap', function() {
 			        mui.openWindow({
 			            url: './new-address.html', //通过URL传参
+			        })
+			});
+			document.getElementById('confirm_cart').addEventListener('tap', function() {
+			        mui.openWindow({
+			            url: './new-buy.html', //通过URL传参
 			        })
 			});
 			var noX = 0; /* 没选中时点击加减计算数量  */
