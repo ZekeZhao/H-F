@@ -21,19 +21,21 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">确认支付</h1>
+			<h1 class="mui-title"style="color: white;">订单详情</h1>
 		</header>
 		<div class="new-buy-address">
 			<a href="new-address.html">
 				<span class="icon iconfont icon-dizhi"></span>
 				<span class="flex1">
+					<p>上海市浦东新区莱阳路</p>
+					<li>
+						<h3>上海市浦东新区莱阳路61号</h3>
+					</li>
 					<li style="display: flex;justify-content: space-between;width:96%">
-						<span style="flex:1">收货人:<label>某某某</label></span>
+						<span style="flex:1"><label>某某某</label></span>
 						<span>18368900682</span>
 					</li>
-					<li>
-						<span>收货地址：上海市浦东新区莱阳路61号</span>
-					</li>
+					
 				</span>
 				<span class="mui-icon mui-icon-arrowright"></span>
 			</a>
@@ -41,29 +43,37 @@
 		<div  class="new-min-order new-buy-order">
 			<ul>
 				<li class="buy-order-details">
-					<img src="../images/list-ph01.png" />
+					<img src="../images/套餐一.jpg"  />
 					<div class="flex1">
-						<h4>超级大品牌服装，现在够级大品牌服装，现在够买只要998</h4>
-						<p>颜色:<label class="mr-6">经典绮丽款</label>尺寸:<label>XL</label></p>
-						<h5 class="mui-text-right font-color-pink">￥<label>32.00</label></h5>
-						<p class="mui-text-right font-color-gray">x<label>3</label></p>
+						<h3>套餐一</h3>
+						<p class="mui-text-right font-color-gray">x<label>1</label></p>
+						<h4 class="mui-text-right font-color-pink">￥<label>68.00</label></h4>
+					</div>
+				</li>
+				<li class="buy-order-details">
+					<img src="../images/套餐六.jpg"  />
+					<div class="flex1">
+						<h3>套餐二</h3>
+						<p class="mui-text-right font-color-gray">x<label>1</label></p>
+						<h4 class="mui-text-right font-color-pink">￥<label>101.00</label></h4>
 					</div>
 				</li>
 				<li>
-					<span>运费</span>
-					<span class="font-color-gray">￥<label>0.00</label></span>
+					<span>包装费：</span>
+					<h4 class="font-color-back">￥<label>2.00</label></h4>
 				</li>
 				<li class="disflex-between">
-					<span>买付款（含运费）</span>
-					<span class="font-color-gray">￥<label>94.00</label></span>
+					<span style="left: ;">小计：</span>
+					<h4 class="font-color-red">￥<label>171.00</label></h4>
+				</li>
+				<li>
+					<span>备注：</span>
+					<span></span>
 				</li>
 			</ul>
-			<div class="mui-input-row" style="margin: 10px 5px;">
-				留言：<textarea id="textarea" rows="5" placeholder="多行文本框"></textarea>
-			</div>
 		</div>
 		<div class="buy__button">
-			<button>总金额：￥<label>134</label></buttons>
+			<button>总金额：￥<label>171</label></buttons>
 			<button class="pay">去付款</button>
 		</div>
 		<script src="../js/mui.min.js"></script>
