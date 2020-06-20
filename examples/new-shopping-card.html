@@ -43,7 +43,7 @@
 						<a class="mui-control-item" href="#item1">全部</a>
 						<a class="mui-control-item" href="#item2">待付款</a>
 						<a class="mui-control-item mui-active" href="#item3">待用餐</a>
-						<a class="mui-control-item" href="#item5">待评价</a>
+						<a class="mui-control-item" id="address">选择收货地址</a>
 					</div>
 				
 				<div>
@@ -138,6 +138,11 @@
 		<script src="../js/jquery.min.js"></script>
 
 		<script>
+			document.getElementById('address').addEventListener('tap', function() {
+			        mui.openWindow({
+			            url: './new-address.html', //通过URL传参
+			        })
+			});
 			var noX = 0; /* 没选中时点击加减计算数量  */
 			var allThis = $(".commodity_box .select em"); /*底部全选*/
 			/* 减  */
