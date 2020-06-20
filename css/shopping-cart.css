@@ -64,6 +64,12 @@
 	border: solid 1px #FC605A;
 	background-size: 22px 22px;
 }
+.mui-content #segmentedControl{
+	background-color: #20919d;
+}
+.mui-bar{
+	background-color:#1b646d;
+}
 
 .account_info li {
 	overflow: hidden;
@@ -95,7 +101,7 @@
 
 .cart_top {
 	padding: 12px 4%;
-	background: #fff;
+	background: #1b646d;
 	font-size: 0.7rem;
 	color: #999;
 	line-height: 24px;
@@ -140,6 +146,7 @@
 	max-height: 100px;
 	float: left;
 	margin-left: 28px;
+	border-radius: 10px;
 }
 
 .commodity_list .commodity_list_term li .div_center {
@@ -156,20 +163,21 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
-	color: #333;
+	color: #20919d;
 	margin: 0;
-	font-size: 0.9rem;
+	font-size: 20px;
 	margin-bottom: 5px;
 }
 
 .commodity_list .commodity_list_term li .div_center h5 {
 	color: #afafaf;
-	font-size: 0.6rem;
+	font-size: 10px;
 }
 
 .commodity_list .commodity_list_term li .div_center p {
 	margin: 0;
-	font-size: 0.8rem;
+	font-size: 15px;
+	font-weight: bolder;
 	color: #FC605A;
 	margin-top: 6px;
 	text-align: center;
