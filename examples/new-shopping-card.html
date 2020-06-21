@@ -15,6 +15,11 @@
 		<!--自定义iconfont-->
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
 		<link rel="stylesheet" type="text/css" href="../css/shopping-cart.css">
+		
+		<style type="text/css">
+			
+		</style>
+		
 		<script type="text/javascript">
 			//定义全局变量
 			var i = 0;
@@ -32,7 +37,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">H&F我的订单</h1>
-			<a class="rig_shai" id="rem_s" href="javascript:void(0)" style="margin-right: 2%;position: absolute; top: 10px; right: 3%;color: #E6F8F2;">编辑</a>
+			<a class="rig_shai" id="rem_s" href="javascript:void(0)" style="margin-right: 2%;position: absolute; top: 10px; right: 3%;color: #E6F8F2; font-size: 0.8rem;" >编辑</a>
 		</header>
 		<div style="height:44px;"></div>
 		
@@ -40,7 +45,7 @@
 		<form method="post" name="cart_form" target="_self" id="cart_form" action="">
 			<div class="mui-content">
 					<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
-						<a class="mui-control-item" href="#item1">全部</a>
+						<a class="mui-control-item" href="#item1" >全部</a>
 						<a class="mui-control-item" href="#item2">待付款</a>
 						<a class="mui-control-item mui-active" href="#item3">待用餐</a>
 						<a class="mui-control-item" id="address">选择收货地址</a>
@@ -58,8 +63,7 @@
 						<ul class="commodity_list_term">
 							<li class="select">
 								<em aem="0" cart_id="84"></em>
-								
-								<img src="../images/套餐一.jpg" />
+								<img src="../images/taocan5.jpg" />
 								<div class="div_center">
 									<h4>套餐一</h4>
 									<h5 class="mui-text-center ">详细:</h5>
@@ -76,7 +80,7 @@
 							</li>
 							<li class="select">
 								<em aem="0" cart_id="84"></em>
-								<img src="../images/套餐四.jpg" />
+								<img src="../images/taocan2.jpg" />
 								<div class="div_center">
 									<h4>套餐二</h4>
 									<h5 class="mui-text-center ">详细:</h5>
@@ -91,6 +95,27 @@
 									<i onclick="plusw(this)">+</i>
 								</div>
 							</li>
+							<li class="select">
+								<em aem="0" cart_id="84"></em>
+								<img src="../images/taocan7.jpg" />
+								<div class="div_center">
+									<h4>套餐二</h4>
+									<h5 class="mui-text-center ">详细:</h5>
+									<h5 class="mui-text-right "><label>应付账款：</label>￥<label>99.00</label></h5>
+									<h5 class="mui-text-right font-color-pink"><label>实际付款：</label>￥<label>99.00</label></h5>
+									<p class="now_value"><i>￥</i><b class="qu_su">99.00</b></p>
+								</div>
+								
+								<div class="div_right">
+									<i onclick="reducew(this)">-</i>
+									<span class="zi">1</span>
+									<input type="hidden" value="84">
+									<i onclick="plusw(this)">+</i>
+									
+								</div>
+								
+							</li>
+							<br><br><br>
 						</ul>
 						
 					</div>
@@ -127,7 +152,7 @@
 			</a>
 			<a class="icon-active" href="new-shopping-card.html">
 				<span class="mui-icon mui-icon-compose"></span>
-				<span class="mui-tab-label">订单详情</span>
+				<span class="mui-tab-label">我的订单</span>
 			</a>
 			<a href="new-mine.html">
 				<span class="mui-icon mui-icon-contact"></span>
