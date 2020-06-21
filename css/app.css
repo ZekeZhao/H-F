@@ -716,6 +716,7 @@ li {
 	display: block;
 }
 
+
 .new-min-order ul li:nth-child(2) .flex1 {
 	flex: 1;
 	display: flex;
@@ -813,6 +814,20 @@ li {
 	display: block;
 	border-radius: 10px;
 }
+.new-buy-order ul li:nth-child(3) img {
+	width: 100px;
+	height: 50px;
+	border-bottom-left-radius: 3px;
+	display: block;
+	border-radius: 10px;
+}
+.new-buy-order ul li:nth-child(4) img {
+	width: 100px;
+	height: 50px;
+	border-bottom-left-radius: 3px;
+	display: block;
+	border-radius: 10px;
+}
 
 .new-buy-order ul li:nth-child(1) .flex1 {
 	flex: 1;
@@ -826,6 +841,43 @@ li {
 	font-weight: normal;
 	line-height: 1.3rem;
 }
+.new-buy-order ul li:nth-child(2) .flex1 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 3%;
+}
+
+.new-buy-order ul li:nth-child(2) .flex1 h4 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.3rem;
+}
+.new-buy-order ul li:nth-child(3) .flex1 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 3%;
+}
+
+.new-buy-order ul li:nth-child(3) .flex1 h4 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.3rem;
+}
+.new-buy-order ul li:nth-child(4) .flex1 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 3%;
+}
+
+.new-buy-order ul li:nth-child(4) .flex1 h4 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.3rem;
+}
+
 
 .new-buy-order ul li:nth-child(1) .flex1 h5 {
 	font-weight: bold;
