@@ -30,32 +30,52 @@
 	</head>
 
 	<body>
+		<div class="mui-bar mui-bar-nav classification-header classification">
+			<h1 class="mui-title" style="color: #FFFFFF;">我的</h1>
+		</div>
 		<div class="nav-bottom">
 			<div class="new-mine">
-				<div class="mine-photo min-photo-bgimg">
-					<img  src="../images/muwu.jpg" />
-					<h4>梨花下的梦</h4>
-				</div>
+
+				<!-- <div class="mine-photo min-photo-bgimg"> -->
+					<a href="new-cooperation.html"><p style="text-align: center;"><img style="width: 5rem;height: 5rem;border-radius: 50%;border: solid 1px #fff;margin-top: 15%;" src="../images/yuantiao.jpg" /></p></a>
+					<h4 style="color: #1B646D; text-align: center;">H&F</h4>
+				<!-- </div>		 -->
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
 						<a href="new-my-news.html" class="mui-navigate-right">
 							我的消息
 						</a>
 					</li>
-					<li class="mui-table-view-cell">
+					<!-- <li class="mui-table-view-cell" >
 						<a href="new-address.html" class="mui-navigate-right">
 							地址管理
 						</a>
+					</li> -->
+					<li class="mui-table-view-cell" onclick="location.href='alters.html';">
+						<a class="mui-navigate-right">
+							新消息通知
+						</a>
 					</li>
 					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-							联系客服
+						<a class="mui-navigate-right" onclick="location.href='about.html';">
+							关于H&F
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
+
+		<a href="../login.html">
+			<p style="text-align: center;">
+			<button type="button" style="background-color: #1B646D; color: white;height: 2.5rem; width: 65%;" >切换账户</button>
+		</p>
+		</a>
 		
+		<a href="../login.html">
+			<p style="text-align: center;">
+			<button type="button" style="background-color: #1B646D; color: white;height: 2.5rem; width: 65%;" >退出登录</button>
+		</p>
+		</a>
 		<div class="nav-footer">
 			<a class="" href="../index.html">
 				<span class="mui-icon mui-icon-home"></span>

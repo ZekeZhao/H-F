@@ -10,41 +10,65 @@
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<!--App自定义的css-->
 		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 	</head>
 
-	<<body style="background: #fff;">
+	<body style="background: #fff;">
+		
 		<div class="mui-bar mui-bar-nav classification-header classification">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="../index.html"></a>
 			<h1 class="mui-title" style="color: #FFFFFF;">优惠活动</h1>
 		</div>
-		<img class="w100" src="../images/null.png" />
-		<img class="w100" src="../images/activity3.png" style="; height: 660px;" />
 		
-		<script src="../js/mui.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
-		<script>
-			mui.init({
-				swipeBack:true //启用右滑关闭功能
-			});
-			(function($) {
-				$('#scroll').scroll({
-					indicators: true //是否显示滚动条
-				});
-				var segmentedControl = document.getElementById('segmentedControl');
-				$('.mui-input-group').on('change', 'input', function() {
-					if (this.checked) {
-						var styleEl = document.querySelector('input[name="style"]:checked');
-						var colorEl = document.querySelector('input[name="color"]:checked');
-						if (styleEl && colorEl) {
-							var style = styleEl.value;
-							var color = colorEl.value;
-							segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
-						}
-					}
-				});
-			})(mui);
+		<div class="nav-bottom">
+		<!--图片轮播-->
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../images/hF.png"></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../images/优惠活动一.jpg"></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../images/优惠活动二.jpg"></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../images/优惠活动三.jpeg"></a></div>
+				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../images/hF.png"></a></div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<img class="w100" src="../images/activity3.png" style="; height: 500px;" />
+	</div>
+		<div class="nav-footer">
+			<a class="icon-active" href="">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a href="examples/new-classification.html">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">下单</span>
+			</a>
+			<a href="examples/new-shopping-card.html">
+				<span class="mui-icon mui-icon-compose"></span>
+				<span class="mui-tab-label">我的订单</span>
+			</a>
+			<a href="examples/new-mine.html">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">个人中心</span>
+			</a>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" charaset="utf-8">
+			  mui.init({
+		        swipeBack:true 
+		    });
+		    var slider = mui("#slider");
+		            slider.slider({
+		                interval: 2000//自动轮播周期，若为0则不自动播放，默认为0；
+		            });
 		</script>
 	</body>
 
