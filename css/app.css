@@ -947,7 +947,7 @@ li {
 	margin: 0 3%;
 	width: 20%;
 	height: auto;
-	height: 6.5rem;
+	height: 4rem;
 }
 
 .z_file {
@@ -959,6 +959,7 @@ li {
 	background-size: 100% auto;
 	height: 6.5em;
 	position: relative;
+	
 }
 
 .z_file input::-webkit-file-upload-button {
@@ -968,6 +969,7 @@ li {
 	position: absolute;
 	outline: 0;
 	opacity: 0;
+
 }
 
 .z_file input#file {
