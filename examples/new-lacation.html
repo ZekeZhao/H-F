@@ -20,21 +20,33 @@
 	<body style="background: #fff;">
 			<div class="mui-bar mui-bar-nav classification-header classification">
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="../index.html"></a>
-				&nbsp;&nbsp;<a href="./GPSMAP.html" style="position: fixed; top: 13px ;"><p style="font-size:large; color: #FFFFFF;" onclick="opensysmap();">成都</p></a>
+				&nbsp;&nbsp;
+				<!-- <a href="./GPSMAP.html" style="position: fixed; top: 13px ;"><p style="font-size:large; color: #FFFFFF;" onclick="opensysmap();">成都</p></a> -->
+				<button type="button" onclick="getmap()" style="background-color: rgba(0,0,0,0); border: none; color: white; position: fixed; top: 0.5rem;">成都</button>
 				<h1 class="mui-title" style="color: #FFFFFF;">附近餐厅</h1>
 			</div><br /><br /><br />
-			<img  class="w100" src="../images/店面.png" style="position: fixed; height: 660px;" />
+			<img  class="w100" src="../images/dianmian.png" style="position: fixed; height: 660px;" />
 			
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
-			function opensysmap(){
-							   var dst = new plus.maps.Point(116.39131928,39.90793074);//天安门
-							   //var src = new plus.maps.Point(long,lat);//当前位置
-							   var src = new plus.maps.Point(116,335,39.966);
-							   plus.maps.openSysMap(dst,"中国北京",src);//src可以不加
+			var mapdiv=document.getElementById("mymap");
+			mapdiv.style.height=(screen.availHeight-88)+"px";
+			mui.init();
+			mui.plusReady(function () {
+			    
+			})
+			var lat=0,long=0,address="";
+			function getmap(){
+				var map=new plus.maps.Map("mymap");
+				map.setCenter(new plus.maps.Point(long,lat));
+				map.setZoom(18);
+				var bike1Icon = new plus.maps.Marker(new plus.maps.Point(long,lat));
+				bike1Icon.setIcon('4.jpg');
+				var bubble = new plus.maps.Bubble('我的家');
+				bike1Icon.setBubble(bubble);
+				map.addOverlay(bike1Icon);
 			}
 		</script>
 	</body>
