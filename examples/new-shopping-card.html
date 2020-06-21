@@ -31,10 +31,8 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">H&F我的订单</h1>
-			<a class="rig_shai" id="rem_s" href="javascript:void(0)" style="margin-right: 2%;position: absolute; top: 5px; right: 3%;">编辑</a>
-			
+			<a class="rig_shai" id="rem_s" href="javascript:void(0)" style="margin-right: 2%;position: absolute; top: 10px; right: 3%;color: #E6F8F2;">编辑</a>
 		</header>
 		<div style="height:44px;"></div>
 		
@@ -45,13 +43,12 @@
 						<a class="mui-control-item" href="#item1">全部</a>
 						<a class="mui-control-item" href="#item2">待付款</a>
 						<a class="mui-control-item mui-active" href="#item3">待用餐</a>
-						<a class="mui-control-item" href="#item5">待评价</a>
+						<a class="mui-control-item" id="address">选择收货地址</a>
 					</div>
 				
 				<div>
 			<!--list-->
 			<div class="commodity_list_box">
-				
 				<!--商品列表-->
 				<div class="commodity_box">
 					<div class="commodity_list">
@@ -64,7 +61,7 @@
 								
 								<img src="../images/套餐一.jpg" />
 								<div class="div_center">
-									<h4>套餐1</h4>
+									<h4>套餐一</h4>
 									<h5 class="mui-text-center ">详细:</h5>
 									<h5 class="mui-text-right font-color-pink"><label>应付账款：</label>￥<label>68.00</label></h5>
 									<h5 class="mui-text-right font-color-pink"><label>实际付款：</label>￥<label>68.00</label></h5>
@@ -79,9 +76,9 @@
 							</li>
 							<li class="select">
 								<em aem="0" cart_id="84"></em>
-								<img src="../images/套餐二.jpg" />
+								<img src="../images/套餐四.jpg" />
 								<div class="div_center">
-									<h4>套餐2</h4>
+									<h4>套餐二</h4>
 									<h5 class="mui-text-center ">详细:</h5>
 									<h5 class="mui-text-right "><label>应付账款：</label>￥<label>68.00</label></h5>
 									<h5 class="mui-text-right font-color-pink"><label>实际付款：</label>￥<label>68.00</label></h5>
@@ -125,11 +122,11 @@
 				<span class="mui-tab-label">首页</span>
 			</a>
 			<a href="new-classification.html">
-				<span class="mui-icon mui-icon-list"></span>
-				<span class="mui-tab-label">分类</span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-tab-label">下单</span>
 			</a>
 			<a class="icon-active" href="new-shopping-card.html">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+				<span class="mui-icon mui-icon-compose"></span>
 				<span class="mui-tab-label">订单详情</span>
 			</a>
 			<a href="new-mine.html">
@@ -141,6 +138,11 @@
 		<script src="../js/jquery.min.js"></script>
 
 		<script>
+			document.getElementById('address').addEventListener('tap', function() {
+			        mui.openWindow({
+			            url: './new-address.html', //通过URL传参
+			        })
+			});
 			var noX = 0; /* 没选中时点击加减计算数量  */
 			var allThis = $(".commodity_box .select em"); /*底部全选*/
 			/* 减  */
